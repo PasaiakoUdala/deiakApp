@@ -1,0 +1,12 @@
+C:\dev\deiakApp\deiakApp\bin\Release\deiakApp.exe
+C:\dev\deiakApp\deiakApp\bin\Release\deiakApp.pdb
+C:\dev\deiakApp\deiakApp\bin\Release\Atapi.dll
+C:\dev\deiakApp\deiakApp\bin\Release\Atapi.pdb
+C:\dev\deiakApp\deiakApp\bin\Release\Atapi.xml
+C:\dev\deiakApp\deiakApp\obj\x86\Release\ResolveAssemblyReference.cache
+C:\dev\deiakApp\deiakApp\obj\x86\Release\deiakApp.Form1.resources
+C:\dev\deiakApp\deiakApp\obj\x86\Release\deiakApp.Properties.Resources.resources
+C:\dev\deiakApp\deiakApp\obj\x86\Release\GenerateResource.read.1.tlog
+C:\dev\deiakApp\deiakApp\obj\x86\Release\GenerateResource.write.1.tlog
+C:\dev\deiakApp\deiakApp\obj\x86\Release\deiakApp.exe
+C:\dev\deiakApp\deiakApp\obj\x86\Release\deiakApp.pdb

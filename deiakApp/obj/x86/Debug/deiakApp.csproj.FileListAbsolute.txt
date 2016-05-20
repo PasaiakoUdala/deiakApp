@@ -1,0 +1,17 @@
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.Form1.resources
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.Properties.Resources.resources
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\dev\deiakApp\deiakApp\bin\Debug\deiakApp.exe
+C:\dev\deiakApp\deiakApp\bin\Debug\deiakApp.pdb
+C:\dev\deiakApp\deiakApp\bin\Debug\Atapi.dll
+C:\dev\deiakApp\deiakApp\bin\Debug\Atapi.pdb
+C:\dev\deiakApp\deiakApp\bin\Debug\Atapi.xml
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.exe
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.pdb
+C:\dev\deiakApp\deiakApp\bin\Debug\deiakApp.exe.manifest
+C:\dev\deiakApp\deiakApp\bin\Debug\deiakApp.application
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.TrustInfo.xml
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.exe.manifest
+C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.application
