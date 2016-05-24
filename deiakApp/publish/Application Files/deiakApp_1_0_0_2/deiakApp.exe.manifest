@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="1.0.0.2" name="deiakApp.exe" publicKeyToken="2833a81366bb7510" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="deiakApp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="deiakApp.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Atapi.dll" size="159744">
+      <assemblyIdentity name="Atapi" version="1.2.0.0" publicKeyToken="6148C7B92DC86471" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>E3xVa3vBWBdX847Lkk7wQHy3xhU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="deiakApp.exe" size="19968">
+      <assemblyIdentity name="deiakApp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>PRrblLoEsI431lWI0pwSDq5R6do=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="favicon.ico" size="1150">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>v3k7E0EHr14H0eeYZsjXayOvVgo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=PASAIA\iibarguren" issuerKeyHash="74127d4ff402a860c3b224e3400a9354f1779608" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Qd5PYwrRN9g+olxWWxbp6rRAR2k=</DigestValue></Reference></SignedInfo><SignatureValue>cT66WP1X0s28atwD7aPWhssschGXKdh9Xzz3auVWM8eCeBjfzLJw9AIRQ7HpHhhYeVZvvtuogTPQuuhovbkSdFEpiv6NhvBM8mwOT2YYoRv+9rsxT1yCLoH8F4uBmzte1GIrQY/s1lvi+bZ0at7J1YzHeqaogIX9hUhNQctoBk8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>qiQP0mm5txvpBE2ARdzx706BEfdF9QvwwociggQJweCOktLVno0wV4hF6NR6my93N6hgxE09pY7M5u9p03elnUJ/esCqi9istHgUAvw1WiupeS5GetUjSM6pkNP/5F396Bz525DhyQEWmeuFKlKY+K3hn2Cn76TCYDIH6cC97qk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="694740b4eae9165b565ca23ed837d10a634fde41" Description="" Url=""><as:assemblyIdentity version="1.0.0.2" name="deiakApp.exe" publicKeyToken="2833a81366bb7510" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=PASAIA\iibarguren</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>o1a9N4gOnlLKrZNP+w/j/4axrFs=</DigestValue></Reference></SignedInfo><SignatureValue>a36Ah+02tvCryw//ij3lMfS14tWSFORbgpyJK9IkIUwulXbOR2etVCJjw5LsAl9CdgoEqk25S7jQ4AfP3Z8FX0rFdWemjLFHV+tID0v4D0wwR+dmF14Buwk6bGk/VOmb7IAQI0/bVcvgy91RaE3SkYhEK89AI6oRSc6BE9o/MnI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>qiQP0mm5txvpBE2ARdzx706BEfdF9QvwwociggQJweCOktLVno0wV4hF6NR6my93N6hgxE09pY7M5u9p03elnUJ/esCqi9istHgUAvw1WiupeS5GetUjSM6pkNP/5F396Bz525DhyQEWmeuFKlKY+K3hn2Cn76TCYDIH6cC97qk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAUKgAwIBAgIQDECtLbajA4ZP/qEWK0aJtDAJBgUrDgMCHQUAMC0xKzApBgNVBAMeIgBQAEEAUwBBAEkAQQBcAGkAaQBiAGEAcgBnAHUAcgBlAG4wHhcNMTYwNTIwMDgxOTI3WhcNMTcwNTIwMTQxOTI3WjAtMSswKQYDVQQDHiIAUABBAFMAQQBJAEEAXABpAGkAYgBhAHIAZwB1AHIAZQBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqJA/Sabm3G+kETYBF3PHvToER90X1C/DChyKCBAnB4I6S0tWejTBXiEXo1HqbL3c3qGDETT2ljszm72nTd6WdQn96wKqL2Ky0eBQC/DVaK6l5LkZ61SNIzqmQ0//kXf3oHPnbkOHJARaZ64UqUpj4reGfYKfvpMJgMgfpwL3uqQIDAQABMAkGBSsOAwIdBQADgYEAPRcbR+Zn9uq4Qin1rtSs47fFYR1EVdhqpy/PY32pqmpmRuif+Sm67b2MyTrWHK2zDXoFt3ZB5AXtXQrwJrL4R1GEzarhOW21mKFEwqmOiGJUOHr+BkTOgfuShRHvntdsT4IaPPKoFLCAhwOQhx5EFdPi4UIVgYzAUfZDqZ0Fsbg=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

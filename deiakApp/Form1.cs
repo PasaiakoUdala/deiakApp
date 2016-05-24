@@ -48,9 +48,11 @@ namespace deiakApp
                 });
             lvCalls.Items.Add(lvi);
 
+            if (call.CallerId != e.Call.Address.Address)
+            {
+                System.Diagnostics.Process.Start("chrome.exe","http://deiak.dev/app_dev.php/deia/" + call.CallerId.ToString());
+            }           
             
-            //System.Diagnostics.Process.Start("http://deiak.dev/app_dev.php/deia/" + call.CalledId.ToString());
-            System.Diagnostics.Process.Start("chrome.exe","http://deiak.dev/app_dev.php/deia/" + call.CallerId.ToString());
             
         }
 
@@ -313,16 +315,74 @@ namespace deiakApp
             }
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            tapiManager.Shutdown();
-        }
-
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             timer1.Enabled = false;
             this.toolStripStatusLabel1.Text = String.Empty;
         }
-     
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (FormWindowState.Minimized == this.WindowState)
+            {
+                MinimzedTray();
+            }
+            else if (FormWindowState.Normal == this.WindowState)
+            {
+
+                MaxmizedFromTray();
+            }
+        }
+
+        private void MinimzedTray()
+        {
+            notifyIcon1.Visible = true;
+            notifyIcon1.Icon = SystemIcons.Application;
+            this.Hide();
+        }
+
+        private void MaxmizedFromTray()
+        {
+            notifyIcon1.Visible = false;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //tapiManager.Shutdown();
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                this.WindowState = FormWindowState.Minimized;
+                this.ShowInTaskbar = false;
+                this.Hide();
+            }
+        }
+
+        private void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;            
+        }
+
+        private void notifyIcon1_MouseDoubleClick_1(object sender, MouseEventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            Form1 frm = new Form1();
+            frm.Show();
+            MaxmizedFromTray();
+        }
+
+        private void notifyIcon1_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void mnuIrten_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+
+       
     }
 }
