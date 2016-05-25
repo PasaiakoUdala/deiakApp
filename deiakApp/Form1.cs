@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using JulMar.Atapi;
+using MySql.Data.MySqlClient;
 
 namespace deiakApp
 {
@@ -18,6 +19,8 @@ namespace deiakApp
         const int COLUMNS_STATE = 2;
         const int COLUMNS_CALLER = 3;
         const int COLUMNS_CALLED = 4;
+
+        private bool lehenAldiz = false;
 
         public Form1()
         {
@@ -292,6 +295,48 @@ namespace deiakApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Fitxatu
+            MySql.Data.MySqlClient.MySqlConnection conn;
+            string myConnectionString;
+
+            myConnectionString = "server=172.28.64.231;uid=root;database=deiak;";
+            
+            try
+            {
+                conn = new MySql.Data.MySqlClient.MySqlConnection();
+                conn.ConnectionString = myConnectionString;
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                
+                // Gaur fitxatu dugun begiratu
+                cmd.CommandText = "SELECT count(userid) AS Zenbat FROM fitxatu WHERE userid=@userid and DATE(`hasi`)=@hasi";
+                cmd.Parameters.AddWithValue("@userid", Environment.UserName);
+                cmd.Parameters.AddWithValue("@hasi",  DateTime.Now.ToString("yyyy-MM-dd"));
+                
+                Int32 res;
+                res=  Convert.ToInt32(cmd.ExecuteScalar());
+
+
+                if (res == 0)
+                {
+                    // Ez dugunez fitxatu gaur, orain egingo dugu.
+                    cmd.CommandText = "INSERT INTO fitxatu(userid,hasi) VALUES(@userid,@orain)";
+                    // ez du behar @userid goian definitu dugulako
+                    //cmd.Parameters.Add("@userid", MySqlDbType.VarChar).Value = Environment.UserName;
+                    cmd.Parameters.Add("@orain", MySqlDbType.DateTime).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    cmd.ExecuteNonQuery();
+                }
+
+              
+                
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
             if (tapiManager.Initialize() == false)
             {
                 MessageBox.Show("No Tapi devices found.");
@@ -337,7 +382,7 @@ namespace deiakApp
         private void MinimzedTray()
         {
             notifyIcon1.Visible = true;
-            notifyIcon1.Icon = SystemIcons.Application;
+            //notifyIcon1.Icon = SystemIcons.Application;
             this.Hide();
         }
 
@@ -381,8 +426,5 @@ namespace deiakApp
             Application.Exit();
         }
 
-
-
-       
     }
 }

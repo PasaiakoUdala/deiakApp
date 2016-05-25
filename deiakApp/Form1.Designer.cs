@@ -181,7 +181,7 @@
             // 
             this.notifyIcon1.ContextMenuStrip = this.mnuObject;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Text = "deiakApp";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick_1);
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick_1);
@@ -191,12 +191,12 @@
             this.mnuObject.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuIrten});
             this.mnuObject.Name = "mnuIrten";
-            this.mnuObject.Size = new System.Drawing.Size(153, 48);
+            this.mnuObject.Size = new System.Drawing.Size(110, 26);
             // 
             // mnuIrten
             // 
             this.mnuIrten.Name = "mnuIrten";
-            this.mnuIrten.Size = new System.Drawing.Size(152, 22);
+            this.mnuIrten.Size = new System.Drawing.Size(109, 22);
             this.mnuIrten.Text = "Irten";
             this.mnuIrten.Click += new System.EventHandler(this.mnuIrten_Click);
             // 
@@ -215,7 +215,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Pasiako Udala. Dei Kudeatzailea";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
