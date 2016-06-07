@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <appSettings>
+      <add key="mysql_ip" value="172.28.64.20"/>
+    </appSettings>
+</configuration>

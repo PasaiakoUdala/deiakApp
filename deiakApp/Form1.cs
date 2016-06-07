@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using JulMar.Atapi;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace deiakApp
 {
@@ -20,7 +21,8 @@ namespace deiakApp
         const int COLUMNS_CALLER = 3;
         const int COLUMNS_CALLED = 4;
 
-        private bool lehenAldiz = false;
+        private string sMySql;
+        
 
         public Form1()
         {
@@ -53,7 +55,7 @@ namespace deiakApp
 
             if (call.CallerId != e.Call.Address.Address)
             {
-                System.Diagnostics.Process.Start("chrome.exe","http://deiak.dev/app_dev.php/deia/" + call.CallerId.ToString());
+                System.Diagnostics.Process.Start("chrome.exe","http://obelix/deia/" + call.CallerId.ToString());
             }           
             
             
@@ -295,11 +297,15 @@ namespace deiakApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Cofig irakurri
+            //sMySql = ConfigurationManager.AppSettings["mysql_ip"];
+            sMySql = ConfigurationManager.AppSettings["mysql_ip"];
+                        
             // Fitxatu
             MySql.Data.MySqlClient.MySqlConnection conn;
             string myConnectionString;
 
-            myConnectionString = "server=172.28.64.231;uid=root;database=deiak;";
+            myConnectionString = "server=" + sMySql + ";uid=root;database=deiak;";
             
             try
             {

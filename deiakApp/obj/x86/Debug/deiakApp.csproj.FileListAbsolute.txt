@@ -15,3 +15,4 @@ C:\dev\deiakApp\deiakApp\bin\Debug\deiakApp.application
 C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.TrustInfo.xml
 C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.exe.manifest
 C:\dev\deiakApp\deiakApp\obj\x86\Debug\deiakApp.application
+C:\dev\deiakApp\deiakApp\bin\Debug\deiakApp.exe.config
